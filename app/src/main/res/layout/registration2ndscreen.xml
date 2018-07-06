@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFE00"
+    tools:context=".Registration2ndScreen">
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="231dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.19">
+
+        <TextView
+            android:id="@+id/textPleaseEnterAuthCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/please_enter_authentication_code"
+            android:textAlignment="center"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editCode"
+                android:layout_width="46dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@drawable/edit_text_rectangle"
+                android:fontFamily="@font/roboto_medium"
+                android:inputType="numberSigned"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:shadowDx="1.2"
+                android:shadowDy="1.2"
+                android:shadowRadius="1.5" />
+
+            <EditText
+                android:id="@+id/editCode2"
+                android:layout_width="46dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@drawable/edit_text_rectangle"
+                android:fontFamily="@font/roboto_medium"
+                android:inputType="numberSigned"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:shadowDx="1.2"
+                android:shadowDy="1.2"
+                android:shadowRadius="1.5" />
+
+            <EditText
+                android:id="@+id/editCode3"
+                android:layout_width="46dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@drawable/edit_text_rectangle"
+                android:fontFamily="@font/roboto_medium"
+                android:inputType="numberSigned"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:shadowDx="1.2"
+                android:shadowDy="1.2"
+                android:shadowRadius="1.5" />
+
+            <EditText
+                android:id="@+id/editCode4"
+                android:layout_width="46dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@drawable/edit_text_rectangle"
+                android:fontFamily="@font/roboto_medium"
+                android:inputType="numberSigned"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:shadowDx="1.2"
+                android:shadowDy="1.2"
+                android:shadowRadius="1.5" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/roboto"
+            android:text="@string/resend_code_2_00"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/textViewForward"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="@string/we_ve_forwarded_the_authentication_code_to"
+            android:textAlignment="center"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/userNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/_60118887777"
+            android:textAlignment="center"
+            android:typeface="sans" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/button"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/backarrow"
+        android:contentDescription="@string/todo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

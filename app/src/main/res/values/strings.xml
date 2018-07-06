@@ -7,5 +7,9 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="please_fill_in_requirement_profile_information">Please fill-in Requirement Profile Information</string>
     <string name="_continue">Continue</string>
-
+    <string name="please_enter_authentication_code">Please Enter Authentication Code</string>
+    <string name="resend_code_2_00">Resend Code 2:00</string>
+    <string name="we_ve_forwarded_the_authentication_code_to">We\'ve forwarded the Authentication Code to</string>
+    <string name="_60118887777">60118887777</string>
+    <string name="todo">TODO</string>
 </resources>
