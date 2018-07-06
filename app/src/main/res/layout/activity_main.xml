@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFE00"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical ="true"
+        android:layout_centerHorizontal = "true"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textviewFill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/please_fill_in_requirement_profile_information"
+            android:textAlignment="center" />
+
+        <ImageButton
+            android:id="@+id/imageProfile"
+            android:layout_width="175dp"
+            android:layout_height="155dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/circle"
+            android:src="@drawable/profile" />
+
+        <TextView
+            android:id="@+id/textUploadProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/upload_profile_picture"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/editUserName"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="15dp"
+            android:background="@drawable/custom_edit_text_bg"
+            android:fontFamily="@font/roboto"
+            android:hint="@string/username"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/editEmailAddress"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="15dp"
+            android:background="@drawable/custom_edit_text_bg"
+            android:fontFamily="@font/roboto"
+            android:hint="@string/email_address"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/editPassword"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="15dp"
+            android:background="@drawable/custom_edit_text_bg"
+            android:fontFamily="@font/roboto"
+            android:hint="@string/password"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/editConfirmPassword"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="15dp"
+            android:background="@drawable/custom_edit_text_bg"
+            android:fontFamily="@font/roboto"
+            android:hint="@string/confirm_password"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/buttonContinue"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:textColor="#ffffff"
+            android:text="@string/_continue"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal"
+            android:background="#000000"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewbotBg"
+        android:layout_width="385dp"
+        android:layout_height="15dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/tamukubot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

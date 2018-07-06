@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">EnterProfileTamuku</string>
+    <string name="upload_profile_picture">Upload Profile Picture</string>
+    <string name="username">Username</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="please_fill_in_requirement_profile_information">Please fill-in Requirement Profile Information</string>
+    <string name="_continue">Continue</string>
+
+</resources>
