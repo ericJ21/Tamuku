@@ -57,12 +57,12 @@ public class Registration2ndScreen extends AppCompatActivity {
         ClickableSpan clickableSpan = new ClickableSpan() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(Registration2ndScreen.this, "One", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Registration2ndScreen.this, "Resend Message", Toast.LENGTH_SHORT).show();
             }
             @Override
             public void updateDrawState(TextPaint ds) {
                 super.updateDrawState(ds);
-                ds.setColor(Color.BLACK);
+                ds.setColor(Color.GRAY);
             }
         };
 

@@ -10,14 +10,15 @@
     <LinearLayout
         android:id="@+id/layout"
         android:layout_width="match_parent"
-        android:layout_height="515dp"
+        android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -26,11 +27,12 @@
             android:id="@+id/textviewFill"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginBottom="25dp"
+            android:layout_marginTop="25dp"
             android:fontFamily="@font/roboto_bold"
             android:text="@string/please_fill_in_requirement_profile_information"
             android:textAlignment="center"
+            android:textColor="#000000"
             android:textSize="15sp" />
 
         <ImageButton
@@ -49,67 +51,67 @@
             android:fontFamily="@font/roboto_light"
             android:text="@string/upload_profile_picture"
             android:textAlignment="center"
+            android:textColor="#000000"
             android:textSize="12sp" />
 
         <EditText
             android:id="@+id/editUserName"
             android:layout_width="240dp"
-            android:layout_height="40dp"
+            android:layout_height="45dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="10dp"
             android:layout_marginTop="30dp"
             android:background="@drawable/custom_edit_text_bg"
             android:fontFamily="@font/roboto"
             android:hint="@string/username"
             android:inputType="text"
-            android:textColor="@android:color/black"
-            android:textSize="16sp" />
+            android:textColor="#000000"
+            android:textSize="14sp" />
 
         <EditText
             android:id="@+id/editEmailAddress"
             android:layout_width="240dp"
-            android:layout_height="40dp"
+            android:layout_height="45dp"
             android:layout_gravity="center_horizontal"
-            android:layout_margin="10dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/custom_edit_text_bg"
             android:fontFamily="@font/roboto"
             android:hint="@string/email_address"
             android:inputType="textEmailAddress"
-            android:textColor="@android:color/black"
-            android:textSize="16sp" />
+            android:textColor="#000000"
+            android:textSize="14sp" />
 
         <EditText
             android:id="@+id/editPassword"
             android:layout_width="240dp"
-            android:layout_height="40dp"
+            android:layout_height="45dp"
             android:layout_gravity="center_horizontal"
-            android:layout_margin="10dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/custom_edit_text_bg"
             android:fontFamily="@font/roboto"
             android:hint="@string/password"
             android:inputType="textPassword"
-            android:textColor="@android:color/black"
-            android:textSize="16sp" />
+            android:textColor="#000000"
+            android:textSize="14sp" />
 
         <EditText
             android:id="@+id/editConfirmPassword"
             android:layout_width="240dp"
-            android:layout_height="40dp"
+            android:layout_height="45dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/custom_edit_text_bg"
             android:fontFamily="@font/roboto"
             android:hint="@string/confirm_password"
             android:inputType="textPassword"
-            android:textColor="@android:color/black"
-            android:textSize="16sp" />
+            android:textColor="#000000"
+            android:textSize="14sp" />
 
         <Button
             android:id="@+id/buttonContinue"
             android:layout_width="100dp"
             android:layout_height="40dp"
             android:layout_gravity="center_horizontal"
-            android:layout_margin="35dp"
+            android:layout_marginTop="50dp"
             android:background="#000000"
             android:fontFamily="@font/roboto"
             android:shadowColor="@android:color/darker_gray"
@@ -121,14 +123,12 @@
 
     <View
         android:id="@+id/viewbotBg"
-        android:layout_width="385dp"
+        android:layout_width="match_parent"
         android:layout_height="15dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
         android:background="@drawable/tamukubot"
+        android:layout_marginTop="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
