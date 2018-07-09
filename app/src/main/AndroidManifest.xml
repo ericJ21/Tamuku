@@ -16,15 +16,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Registration2ndScreen">
-        </activity>
-        <activity android:name=".SplashScreen">
-        </activity>
-        <activity android:name=".SplashScreenHome">
-        </activity>
+        <activity android:name=".Registration2ndScreen"></activity>
+        <activity android:name=".SplashScreen"></activity>
+        <activity android:name=".SplashScreenHome"></activity>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <activity android:name=".RegistrationActivity1"></activity>
     </application>
 
 </manifest>
