@@ -24,6 +24,8 @@ public class Registration2ndScreen extends AppCompatActivity {
     private EditText code2;
     private EditText code3;
     private EditText code4;
+    private EditText code5;
+    private EditText code6;
     private TextView resend;
     private TextView forwardAuthcode;
     private TextView userNumber;
@@ -40,6 +42,8 @@ public class Registration2ndScreen extends AppCompatActivity {
         code2 = findViewById(R.id.editCode2);
         code3 = findViewById(R.id.editCode3);
         code4 = findViewById(R.id.editCode4);
+        code5 = findViewById(R.id.editCode5);
+        code6 = findViewById(R.id.editCode6);
         resend = findViewById(R.id.textCode);
         forwardAuthcode = findViewById(R.id.textViewForward);
         userNumber = findViewById(R.id.userNumber);

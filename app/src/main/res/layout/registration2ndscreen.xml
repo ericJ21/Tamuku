@@ -102,6 +102,36 @@
                 android:shadowDy="1.2"
                 android:shadowRadius="1.5" />
 
+            <EditText
+                android:id="@+id/editCode5"
+                android:layout_width="46dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1.5dp"
+                android:background="@drawable/edit_text_rectangle"
+                android:fontFamily="@font/roboto_medium"
+                android:inputType="numberPassword"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:shadowDx="1.2"
+                android:shadowDy="1.2"
+                android:shadowRadius="1.5" />
+
+            <EditText
+                android:id="@+id/editCode6"
+                android:layout_width="46dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1.5dp"
+                android:background="@drawable/edit_text_rectangle"
+                android:fontFamily="@font/roboto_medium"
+                android:inputType="numberPassword"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:shadowDx="1.2"
+                android:shadowDy="1.2"
+                android:shadowRadius="1.5" />
+
         </LinearLayout>
 
         <TextView
