@@ -9,11 +9,11 @@
 
     <Button
         android:id="@+id/buttonClose"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:background="@drawable/close"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.05"
@@ -26,7 +26,7 @@
         android:layout_height="25dp"
         android:layout_marginEnd="10dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/forwardarrow"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.952"
@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
             android:layout_marginTop="40dp"
-            android:fontFamily="@font/roboto_medium"
+            android:fontFamily="@font/roboto"
             android:text="@string/please_enter_your_mobile_number"
             android:textAlignment="center"
             android:textColor="#000000"
@@ -62,7 +62,7 @@
 
         <EditText
             android:id="@+id/editMobileNumber"
-            android:layout_width="255dp"
+            android:layout_width="270dp"
             android:layout_height="45dp"
             android:layout_gravity="center_horizontal"
             android:layout_margin="15dp"
@@ -82,6 +82,9 @@
                 android:id="@+id/buttonCheck"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/check_box_bg"
+                android:layout_marginTop="2dp"
+                android:buttonTint="#4DB6AC"
                 />
 
             <TextView
