@@ -28,9 +28,8 @@ public class Registration2ndScreen extends AppCompatActivity {
     private EditText code6;
     private TextView resend;
     private TextView forwardAuthcode;
-    private TextView userNumber;
 
-    private ImageButton backButton;
+    private Button backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +45,6 @@ public class Registration2ndScreen extends AppCompatActivity {
         code6 = findViewById(R.id.editCode6);
         resend = findViewById(R.id.textCode);
         forwardAuthcode = findViewById(R.id.textViewForward);
-        userNumber = findViewById(R.id.userNumber);
 
         backButton = findViewById(R.id.button);
 

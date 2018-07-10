@@ -28,9 +28,10 @@
 
         <TextView
             android:id="@+id/textPleaseEnterAuthCode"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="235dp"
+            android:layout_height="18.5dp"
             android:layout_margin="15dp"
+            android:layout_gravity="center_horizontal"
             android:fontFamily="@font/roboto_medium"
             android:text="@string/please_enter_authentication_code"
             android:textColor="#000000"
@@ -39,14 +40,14 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="46dp"
+            android:layout_height="43dp"
             android:gravity="center_horizontal"
             android:orientation="horizontal">
 
             <EditText
                 android:id="@+id/editCode"
-                android:layout_width="46dp"
-                android:layout_height="match_parent"
+                android:layout_width="41.5dp"
+                android:layout_height="41.5dp"
                 android:layout_margin="1.5dp"
                 android:background="@drawable/edit_text_rectangle"
                 android:fontFamily="@font/roboto_medium"
@@ -60,8 +61,8 @@
 
             <EditText
                 android:id="@+id/editCode2"
-                android:layout_width="46dp"
-                android:layout_height="match_parent"
+                android:layout_width="41.5dp"
+                android:layout_height="41.5dp"
                 android:layout_margin="1.5dp"
                 android:background="@drawable/edit_text_rectangle"
                 android:fontFamily="@font/roboto_medium"
@@ -75,8 +76,8 @@
 
             <EditText
                 android:id="@+id/editCode3"
-                android:layout_width="46dp"
-                android:layout_height="match_parent"
+                android:layout_width="41.5dp"
+                android:layout_height="41.5dp"
                 android:layout_margin="1.5dp"
                 android:background="@drawable/edit_text_rectangle"
                 android:fontFamily="@font/roboto_medium"
@@ -90,8 +91,8 @@
 
             <EditText
                 android:id="@+id/editCode4"
-                android:layout_width="46dp"
-                android:layout_height="match_parent"
+                android:layout_width="41.5dp"
+                android:layout_height="41.5dp"
                 android:layout_margin="1.5dp"
                 android:background="@drawable/edit_text_rectangle"
                 android:fontFamily="@font/roboto_medium"
@@ -105,8 +106,8 @@
 
             <EditText
                 android:id="@+id/editCode5"
-                android:layout_width="46dp"
-                android:layout_height="match_parent"
+                android:layout_width="41.5dp"
+                android:layout_height="41.5dp"
                 android:layout_margin="1.5dp"
                 android:background="@drawable/edit_text_rectangle"
                 android:fontFamily="@font/roboto_medium"
@@ -120,8 +121,8 @@
 
             <EditText
                 android:id="@+id/editCode6"
-                android:layout_width="46dp"
-                android:layout_height="match_parent"
+                android:layout_width="41.5dp"
+                android:layout_height="41.5dp"
                 android:layout_margin="1.5dp"
                 android:background="@drawable/edit_text_rectangle"
                 android:fontFamily="@font/roboto_medium"
@@ -137,8 +138,8 @@
 
         <TextView
             android:id="@+id/textCode"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="121.5dp"
+            android:layout_height="17.5dp"
             android:layout_marginTop="25dp"
             android:layout_marginBottom="15dp"
             android:clickable="true"
@@ -146,32 +147,23 @@
             android:fontFamily="@font/roboto"
             android:textColor="#000000"
             android:text="@string/resend_code_2_00"
+            android:layout_gravity="center_horizontal"
             android:textAlignment="center" />
 
         <TextView
             android:id="@+id/textViewForward"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="276dp"
+            android:layout_height="34.5dp"
             android:fontFamily="@font/roboto"
             android:text="@string/we_ve_forwarded_the_authentication_code_to"
             android:textAlignment="center"
-            android:textColor="#000000"
-            android:typeface="sans" />
-
-        <TextView
-            android:id="@+id/userNumber"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="1dp"
-            android:fontFamily="@font/roboto"
-            android:text="@string/_60118887777"
-            android:textAlignment="center"
+            android:layout_gravity="center_horizontal"
             android:textColor="#000000"
             android:typeface="sans" />
 
     </LinearLayout>
 
-    <ImageButton
+    <Button
         android:id="@+id/button"
         android:layout_width="24dp"
         android:layout_height="24dp"

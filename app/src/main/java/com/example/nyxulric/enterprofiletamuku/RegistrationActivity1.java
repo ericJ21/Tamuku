@@ -3,11 +3,13 @@ package com.example.nyxulric.enterprofiletamuku;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.AppCompatCheckBox;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.TextPaint;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
+import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -22,7 +24,9 @@ public class RegistrationActivity1 extends AppCompatActivity {
     private EditText editTextMobileNumber;
     private Button buttonClose;
     private Button buttonForward;
-    private CheckBox checkBox;
+    private Button checkBox;
+
+    int i =1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +53,7 @@ public class RegistrationActivity1 extends AppCompatActivity {
             @Override
             public void updateDrawState(TextPaint ds) {
                 super.updateDrawState(ds);
-                ds.setColor(Color.BLUE);
+                ds.setColor(Color.rgb(138,214,248));
             }
         };
 
@@ -62,7 +66,7 @@ public class RegistrationActivity1 extends AppCompatActivity {
             @Override
             public void updateDrawState(TextPaint ds) {
                 super.updateDrawState(ds);
-                ds.setColor(Color.BLUE);
+                ds.setColor(Color.rgb(138,214,248));
             }
         };
 
@@ -71,5 +75,16 @@ public class RegistrationActivity1 extends AppCompatActivity {
 
         textViewServiceTerm.setText(ss);
         textViewServiceTerm.setMovementMethod(LinkMovementMethod.getInstance());
+    }
+
+    public void checkMe(View view){
+        if(view == checkBox){
+            i++;
+            if(i%2==0){
+                checkBox.setBackgroundResource(R.drawable.check);
+            }else{
+                checkBox.setBackgroundResource(R.drawable.checkcircle);
+            }
+        }
     }
 }

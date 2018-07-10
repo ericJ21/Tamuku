@@ -9,8 +9,8 @@
 
     <Button
         android:id="@+id/buttonClose"
-        android:layout_width="15dp"
-        android:layout_height="15dp"
+        android:layout_width="17.5dp"
+        android:layout_height="17.5dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="15dp"
@@ -22,8 +22,8 @@
 
     <Button
         android:id="@+id/buttonForward"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
+        android:layout_width="27.5dp"
+        android:layout_height="25.5dp"
         android:layout_marginEnd="10dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="10dp"
@@ -39,61 +39,68 @@
         android:layout_width="match_parent"
         android:layout_height="505dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginStart="15dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         android:orientation="vertical"
+        android:padding="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.323">
 
         <TextView
             android:id="@+id/textViewEnter"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="208dp"
+            android:layout_height="18.5dp"
+            android:layout_gravity="center_horizontal"
             android:layout_marginBottom="5dp"
-            android:layout_marginTop="40dp"
-            android:fontFamily="@font/roboto"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/roboto_light"
             android:text="@string/please_enter_your_mobile_number"
             android:textAlignment="center"
             android:textColor="#000000"
-            android:textSize="15sp" />
+            android:textSize="14sp" />
 
         <EditText
             android:id="@+id/editMobileNumber"
-            android:layout_width="270dp"
-            android:layout_height="45dp"
+            android:layout_width="247.5dp"
+            android:layout_height="41.5dp"
             android:layout_gravity="center_horizontal"
-            android:layout_margin="15dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/edit_text_bg"
+            android:fontFamily="@font/roboto_light"
             android:inputType="number"
             android:textAlignment="center"
-            android:textColor="#000000"/>
+            android:textColor="#000000"
+            android:textSize="14sp" />
 
         <LinearLayout
             android:id="@+id/layout3nd"
-            android:layout_width="match_parent"
+            android:layout_width="305dp"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:textAlignment="center">
 
-            <CheckBox
+            <Button
                 android:id="@+id/buttonCheck"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/check_box_bg"
-                android:layout_marginTop="2dp"
-                android:buttonTint="#4DB6AC"
-                />
+                android:layout_width="17.5dp"
+                android:layout_height="17.5dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/checkcircle"
+                android:onClick="checkMe"/>
 
             <TextView
                 android:id="@+id/textViewService"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="19dp"
                 android:fontFamily="@font/roboto"
                 android:text="@string/i_agree_to_tamuku_s_terms_of_service_and_privacy_policy"
-                android:textSize="10sp" />
+                android:textSize="9sp" />
 
         </LinearLayout>
 
