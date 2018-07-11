@@ -34,7 +34,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/layout2nd"
         android:layout_width="match_parent"
         android:layout_height="505dp"
@@ -42,22 +42,21 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
-        android:orientation="vertical"
-        android:padding="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.323">
+        app:layout_constraintVertical_bias="0.0">
 
         <TextView
             android:id="@+id/textViewEnter"
             android:layout_width="wrap_content"
             android:layout_height="18.5dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="5dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="82dp"
             android:fontFamily="@font/roboto"
             android:text="@string/please_enter_your_mobile_number"
             android:textAlignment="center"
@@ -68,9 +67,9 @@
             android:id="@+id/editMobileNumber"
             android:layout_width="247.5dp"
             android:layout_height="43dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="30dp"
-            android:layout_marginTop="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="120dp"
             android:background="@drawable/edit_text_bg"
             android:fontFamily="@font/roboto_light"
             android:inputType="number"
@@ -78,34 +77,29 @@
             android:textColor="#000000"
             android:textSize="14sp" />
 
-        <LinearLayout
-            android:id="@+id/layout3nd"
-            android:layout_width="305dp"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal"
-            android:textAlignment="center">
+        <Button
+            android:id="@+id/buttonCheck"
+            android:layout_width="18.5dp"
+            android:layout_height="18.5dp"
+            android:layout_alignStart="@+id/editMobileNumber"
+            android:layout_alignTop="@+id/textViewService"
+            android:background="@drawable/checkcircle"
+            android:onClick="checkMe" />
 
-            <Button
-                android:id="@+id/buttonCheck"
-                android:layout_width="18.5dp"
-                android:layout_height="18.5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginTop="2dp"
-                android:background="@drawable/checkcircle"
-                android:onClick="checkMe" />
+        <TextView
+            android:id="@+id/textViewService"
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"
+            android:layout_alignEnd="@+id/editMobileNumber"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="191dp"
+            android:fontFamily="@font/roboto"
+            android:gravity="center_vertical"
+            android:text="@string/i_agree_to_tamuku_s_terms_of_service_and_privacy_policy"
+            android:textSize="9sp" />
 
-            <TextView
-                android:id="@+id/textViewService"
-                android:layout_width="wrap_content"
-                android:layout_height="19dp"
-                android:fontFamily="@font/roboto"
-                android:text="@string/i_agree_to_tamuku_s_terms_of_service_and_privacy_policy"
-                android:textSize="9sp" />
 
-        </LinearLayout>
-
-    </LinearLayout>
+    </RelativeLayout>
 
 
 </android.support.constraint.ConstraintLayout>

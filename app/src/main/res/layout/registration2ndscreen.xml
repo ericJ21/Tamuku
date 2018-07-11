@@ -8,173 +8,183 @@
     android:background="#FFFE00"
     tools:context=".Registration2ndScreen">
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/line1"
         android:layout_width="match_parent"
-        android:layout_height="231dp"
+        android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.19">
+        app:layout_constraintVertical_bias="0.0">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="12dp"
+            android:layout_toStartOf="@+id/textViewForward"
+            android:background="@drawable/backarrow"
+            android:contentDescription="@string/todo"
+            android:padding="20dp"
+            tools:layout_editor_absoluteX="328dp"
+            tools:layout_editor_absoluteY="28dp" />
 
         <TextView
             android:id="@+id/textPleaseEnterAuthCode"
-            android:layout_width="235dp"
+            android:layout_width="246dp"
             android:layout_height="18.5dp"
-            android:layout_margin="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
             android:layout_gravity="center_horizontal"
+            android:layout_marginTop="85dp"
             android:fontFamily="@font/roboto_medium"
             android:text="@string/please_enter_authentication_code"
-            android:textColor="#000000"
             android:textAlignment="center"
+            android:textColor="#000000"
             android:textSize="15sp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="43dp"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal">
+        <EditText
+            android:id="@+id/editCode"
+            android:layout_width="41.5dp"
+            android:layout_height="41.5dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="124dp"
+            android:background="@drawable/edit_text_rectangle"
+            android:fontFamily="@font/roboto_medium"
+            android:inputType="numberPassword"
+            android:maxLength="1"
+            android:shadowDx="1.2"
+            android:shadowDy="1.2"
+            android:shadowRadius="1.5"
+            android:textAlignment="center"
+            android:textColor="@android:color/black" />
 
-            <EditText
-                android:id="@+id/editCode"
-                android:layout_width="41.5dp"
-                android:layout_height="41.5dp"
-                android:layout_margin="1.5dp"
-                android:background="@drawable/edit_text_rectangle"
-                android:fontFamily="@font/roboto_medium"
-                android:inputType="numberPassword"
-                android:maxLength="1"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:shadowDx="1.2"
-                android:shadowDy="1.2"
-                android:shadowRadius="1.5" />
+        <EditText
+            android:id="@+id/editCode2"
+            android:layout_width="41.5dp"
+            android:layout_height="41.5dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/editCode"
+            android:layout_marginStart="76dp"
+            android:background="@drawable/edit_text_rectangle"
+            android:fontFamily="@font/roboto_medium"
+            android:inputType="numberPassword"
+            android:maxLength="1"
+            android:shadowDx="1.2"
+            android:shadowDy="1.2"
+            android:shadowRadius="1.5"
+            android:textAlignment="center"
+            android:textColor="@android:color/black" />
 
-            <EditText
-                android:id="@+id/editCode2"
-                android:layout_width="41.5dp"
-                android:layout_height="41.5dp"
-                android:layout_margin="1.5dp"
-                android:background="@drawable/edit_text_rectangle"
-                android:fontFamily="@font/roboto_medium"
-                android:inputType="numberPassword"
-                android:maxLength="1"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:shadowDx="1.2"
-                android:shadowDy="1.2"
-                android:shadowRadius="1.5" />
+        <EditText
+            android:id="@+id/editCode3"
+            android:layout_width="41.5dp"
+            android:layout_height="41.5dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/editCode"
+            android:layout_marginStart="127dp"
+            android:background="@drawable/edit_text_rectangle"
+            android:fontFamily="@font/roboto_medium"
+            android:inputType="numberPassword"
+            android:maxLength="1"
+            android:shadowDx="1.2"
+            android:shadowDy="1.2"
+            android:shadowRadius="1.5"
+            android:textAlignment="center"
+            android:textColor="@android:color/black" />
 
-            <EditText
-                android:id="@+id/editCode3"
-                android:layout_width="41.5dp"
-                android:layout_height="41.5dp"
-                android:layout_margin="1.5dp"
-                android:background="@drawable/edit_text_rectangle"
-                android:fontFamily="@font/roboto_medium"
-                android:inputType="numberPassword"
-                android:maxLength="1"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:shadowDx="1.2"
-                android:shadowDy="1.2"
-                android:shadowRadius="1.5" />
+        <EditText
+            android:id="@+id/editCode4"
+            android:layout_width="41.5dp"
+            android:layout_height="41.5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/editCode"
+            android:layout_marginEnd="126dp"
+            android:background="@drawable/edit_text_rectangle"
+            android:fontFamily="@font/roboto_medium"
+            android:inputType="numberPassword"
+            android:maxLength="1"
+            android:shadowDx="1.2"
+            android:shadowDy="1.2"
+            android:shadowRadius="1.5"
+            android:textAlignment="center"
+            android:textColor="@android:color/black" />
 
-            <EditText
-                android:id="@+id/editCode4"
-                android:layout_width="41.5dp"
-                android:layout_height="41.5dp"
-                android:layout_margin="1.5dp"
-                android:background="@drawable/edit_text_rectangle"
-                android:fontFamily="@font/roboto_medium"
-                android:inputType="numberPassword"
-                android:maxLength="1"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:shadowDx="1.2"
-                android:shadowDy="1.2"
-                android:shadowRadius="1.5" />
+        <EditText
+            android:id="@+id/editCode5"
+            android:layout_width="41.5dp"
+            android:layout_height="41.5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/editCode"
+            android:layout_marginEnd="76dp"
+            android:background="@drawable/edit_text_rectangle"
+            android:fontFamily="@font/roboto_medium"
+            android:inputType="numberPassword"
+            android:maxLength="1"
+            android:shadowDx="1.2"
+            android:shadowDy="1.2"
+            android:shadowRadius="1.5"
+            android:textAlignment="center"
+            android:textColor="@android:color/black" />
 
-            <EditText
-                android:id="@+id/editCode5"
-                android:layout_width="41.5dp"
-                android:layout_height="41.5dp"
-                android:layout_margin="1.5dp"
-                android:background="@drawable/edit_text_rectangle"
-                android:fontFamily="@font/roboto_medium"
-                android:inputType="numberPassword"
-                android:maxLength="1"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:shadowDx="1.2"
-                android:shadowDy="1.2"
-                android:shadowRadius="1.5" />
-
-            <EditText
-                android:id="@+id/editCode6"
-                android:layout_width="41.5dp"
-                android:layout_height="41.5dp"
-                android:layout_margin="1.5dp"
-                android:background="@drawable/edit_text_rectangle"
-                android:fontFamily="@font/roboto_medium"
-                android:inputType="numberPassword"
-                android:maxLength="1"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:shadowDx="1.2"
-                android:shadowDy="1.2"
-                android:shadowRadius="1.5" />
-
-        </LinearLayout>
+        <EditText
+            android:id="@+id/editCode6"
+            android:layout_width="41.5dp"
+            android:layout_height="41.5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/editCode"
+            android:layout_marginEnd="26dp"
+            android:background="@drawable/edit_text_rectangle"
+            android:fontFamily="@font/roboto_medium"
+            android:inputType="numberPassword"
+            android:maxLength="1"
+            android:shadowDx="1.2"
+            android:shadowDy="1.2"
+            android:shadowRadius="1.5"
+            android:textAlignment="center"
+            android:textColor="@android:color/black" />
 
         <TextView
             android:id="@+id/textCode"
             android:layout_width="121.5dp"
             android:layout_height="17.5dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginBottom="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="184dp"
             android:clickable="true"
             android:focusable="true"
             android:fontFamily="@font/roboto"
-            android:textColor="#000000"
             android:text="@string/resend_code_2_00"
-            android:layout_gravity="center_horizontal"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textColor="#000000" />
 
         <TextView
             android:id="@+id/textViewForward"
             android:layout_width="276dp"
             android:layout_height="34.5dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="214dp"
             android:fontFamily="@font/roboto"
             android:text="@string/we_ve_forwarded_the_authentication_code_to"
             android:textAlignment="center"
-            android:layout_gravity="center_horizontal"
             android:textColor="#000000"
             android:typeface="sans" />
 
-    </LinearLayout>
+    </RelativeLayout>
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/backarrow"
-        android:contentDescription="@string/todo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
 
 </android.support.constraint.ConstraintLayout>
