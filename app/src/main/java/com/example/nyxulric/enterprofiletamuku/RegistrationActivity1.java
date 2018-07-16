@@ -1,5 +1,6 @@
 package com.example.nyxulric.enterprofiletamuku;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,7 +18,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class RegistrationActivity1 extends AppCompatActivity {
+public class RegistrationActivity1 extends AppCompatActivity implements View.OnClickListener{
 
     private TextView textViewEnter;
     private TextView textViewServiceTerm;
@@ -75,6 +76,9 @@ public class RegistrationActivity1 extends AppCompatActivity {
 
         textViewServiceTerm.setText(ss);
         textViewServiceTerm.setMovementMethod(LinkMovementMethod.getInstance());
+
+        buttonForward.setOnClickListener(this);
+        buttonClose.setOnClickListener(this);
     }
 
     public void checkMe(View view){
@@ -85,6 +89,14 @@ public class RegistrationActivity1 extends AppCompatActivity {
             }else{
                 checkBox.setBackgroundResource(R.drawable.checkcircle);
             }
+        }
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (view==buttonForward){
+            finish();
+            startActivity(new Intent(this, Registration2ndScreen.class));
         }
     }
 }

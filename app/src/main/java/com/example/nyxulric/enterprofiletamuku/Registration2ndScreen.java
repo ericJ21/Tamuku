@@ -21,7 +21,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-public class Registration2ndScreen extends AppCompatActivity {
+public class Registration2ndScreen extends AppCompatActivity implements View.OnClickListener{
 
     private TextView pleaseEnterCode;
     private EditText code1;
@@ -34,6 +34,7 @@ public class Registration2ndScreen extends AppCompatActivity {
     private TextView forwardAuthcode;
 
     private Button backButton;
+    private Button forwardButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +49,8 @@ public class Registration2ndScreen extends AppCompatActivity {
         code5 = findViewById(R.id.editCode5);
         code6 = findViewById(R.id.editCode6);
         resend = findViewById(R.id.textCode);
+
+
         code1.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int start, int count, int after) {
@@ -169,6 +172,7 @@ public class Registration2ndScreen extends AppCompatActivity {
 
         forwardAuthcode = findViewById(R.id.textViewForward);
 
+        forwardButton = findViewById(R.id.buttonForward);
         backButton = findViewById(R.id.button);
 
         String text = "Resend Code 2:00";
@@ -191,5 +195,13 @@ public class Registration2ndScreen extends AppCompatActivity {
 
         resend.setText(ss);
         resend.setMovementMethod(LinkMovementMethod.getInstance());
+
+        backButton.setOnClickListener(this);
+        forwardButton.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View view) {
+
     }
 }

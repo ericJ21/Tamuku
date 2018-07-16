@@ -7,47 +7,43 @@
     tools:context=".RegistrationActivity1"
     android:background="#FFFE00">
 
-    <Button
-        android:id="@+id/buttonClose"
-        android:layout_width="17.5dp"
-        android:layout_height="17.5dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/close"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/buttonForward"
-        android:layout_width="27.5dp"
-        android:layout_height="25.5dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/forwardarrow"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.952"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
     <RelativeLayout
         android:id="@+id/layout2nd"
         android:layout_width="match_parent"
-        android:layout_height="505dp"
+        android:layout_height="503dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
+
+        <Button
+            android:id="@+id/buttonClose"
+            android:layout_width="15.5dp"
+            android:layout_height="15.5dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="17dp"
+            android:background="@drawable/close"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <Button
+            android:id="@+id/buttonForward"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="11dp"
+            android:background="@drawable/forwardarrow"
+            android:clickable="true"
+            android:focusable="true" />
 
         <TextView
             android:id="@+id/textViewEnter"
