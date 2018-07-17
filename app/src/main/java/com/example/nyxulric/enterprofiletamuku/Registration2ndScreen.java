@@ -20,18 +20,17 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.lang.reflect.Array;
 
-public class Registration2ndScreen extends AppCompatActivity implements View.OnClickListener{
+
+public class Registration2ndScreen extends AppCompatActivity implements View.OnClickListener {
 
     private TextView pleaseEnterCode;
-    private EditText code1;
-    private EditText code2;
-    private EditText code3;
-    private EditText code4;
-    private EditText code5;
-    private EditText code6;
+    private EditText code1, code2, code3, code4, code5, code6;
     private TextView resend;
     private TextView forwardAuthcode;
+
+    private char s;
 
     private Button backButton;
     private Button forwardButton;
@@ -50,125 +49,12 @@ public class Registration2ndScreen extends AppCompatActivity implements View.OnC
         code6 = findViewById(R.id.editCode6);
         resend = findViewById(R.id.textCode);
 
-
-        code1.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int start, int before, int count) {
-                if (code1.getText().toString().length()==1){
-                    code2.requestFocus(View.FOCUS_DOWN);
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-            }
-        });
-        code2.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int start, int before, int count) {
-                if (code2.getText().toString().length()==1){
-                    code3.requestFocus(View.FOCUS_DOWN);
-                }else {
-                    if (count == 0){
-                        code1.requestFocus(View.FOCUS_DOWN);
-                    }
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-            }
-        });
-        code3.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int start, int before, int count) {
-                if (code3.getText().toString().length()==1){
-                    code4.requestFocus(View.FOCUS_DOWN);
-                }else {
-                    if (count == 0){
-                        code2.requestFocus(View.FOCUS_DOWN);
-                    }
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-            }
-        });
-        code4.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int start, int before, int count) {
-                if (code4.getText().toString().length()==1){
-                    code5.requestFocus(View.FOCUS_DOWN);
-                }else {
-                    if (count == 0){
-                        code3.requestFocus(View.FOCUS_DOWN);
-                    }
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-            }
-        });
-        code5.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int start, int before, int count) {
-                if (code5.getText().toString().length()==1){
-                    code6.requestFocus(View.FOCUS_DOWN);
-                }else {
-                    if (count == 0){
-                        code4.requestFocus(View.FOCUS_DOWN);
-                    }
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-            }
-        });
-        code6.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int start, int before, int count) {
-                if (count == 0){
-                    code5.requestFocus(View.FOCUS_DOWN);
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-            }
-        });
+        code1.addTextChangedListener(new GenericTextWatcher(code1));
+        code2.addTextChangedListener(new GenericTextWatcher(code2));
+        code3.addTextChangedListener(new GenericTextWatcher(code3));
+        code4.addTextChangedListener(new GenericTextWatcher(code4));
+        code5.addTextChangedListener(new GenericTextWatcher(code5));
+        code6.addTextChangedListener(new GenericTextWatcher(code6));
 
         forwardAuthcode = findViewById(R.id.textViewForward);
 
@@ -184,6 +70,7 @@ public class Registration2ndScreen extends AppCompatActivity implements View.OnC
             public void onClick(View view) {
                 Toast.makeText(Registration2ndScreen.this, "Resend Message", Toast.LENGTH_SHORT).show();
             }
+
             @Override
             public void updateDrawState(TextPaint ds) {
                 super.updateDrawState(ds);
@@ -191,7 +78,7 @@ public class Registration2ndScreen extends AppCompatActivity implements View.OnC
             }
         };
 
-        ss.setSpan(clickableSpan,0,6, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE );
+        ss.setSpan(clickableSpan, 0, 6, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
 
         resend.setText(ss);
         resend.setMovementMethod(LinkMovementMethod.getInstance());
@@ -199,6 +86,92 @@ public class Registration2ndScreen extends AppCompatActivity implements View.OnC
         backButton.setOnClickListener(this);
         forwardButton.setOnClickListener(this);
     }
+
+    public class GenericTextWatcher implements TextWatcher {
+
+        private View view;
+
+        private GenericTextWatcher(View view) {
+            this.view = view;
+        }
+
+        @Override
+        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence charSequence, int i, int count, int i2) {
+            String text = charSequence.toString();
+            switch (view.getId()){
+                case R.id.editCode:
+                    if (text.length()==1)
+                        code2.requestFocus(View.FOCUS_DOWN);
+                    else if (count == 0)
+                        code1.requestFocus(View.FOCUS_DOWN);
+                    break;
+                case R.id.editCode2:
+                    if (text.length()==1)
+                        code3.requestFocus(View.FOCUS_DOWN);
+                    else if (count == 0)
+                        code2.requestFocus(View.FOCUS_DOWN);
+                    break;
+                case R.id.editCode3:
+                    if (text.length()==1)
+                        code4.requestFocus(View.FOCUS_DOWN);
+                    else
+                        if (text.length() == 0)
+                        code3.requestFocus(View.FOCUS_DOWN);
+                    break;
+                case R.id.editCode4:
+                    if (text.length()==1)
+                        code5.requestFocus(View.FOCUS_DOWN);
+                    else if (count == 0)
+                        code4.requestFocus(View.FOCUS_DOWN);
+                    break;
+                case R.id.editCode5:
+                    if (text.length()==1)
+                        code6.requestFocus(View.FOCUS_DOWN);
+                    else if (count == 0)
+                        code5.requestFocus(View.FOCUS_DOWN);
+                    break;
+                case R.id.editCode6:
+                    if (count == 0)
+                        code6.requestFocus(View.FOCUS_DOWN);
+                    break;
+            }
+        }
+
+        @Override
+        public void afterTextChanged(Editable editable) {
+            String text = editable.toString();
+            switch (view.getId()) {
+                case R.id.editCode:
+                    break;
+                case R.id.editCode2:
+                    if (text.length() == 0)
+                        code1.requestFocus();
+                    break;
+                case R.id.editCode3:
+                    if (text.length() == 0)
+                        code2.requestFocus();
+                    break;
+                case R.id.editCode4:
+                    if (text.length() == 0)
+                        code3.requestFocus();
+                    break;
+                case R.id.editCode5:
+                    if (text.length() == 0)
+                        code4.requestFocus();
+                    break;
+                case R.id.editCode6:
+                    if (text.length() == 0)
+                        code5.requestFocus();
+                    break;
+            }
+          }
+    }
+
 
     @Override
     public void onClick(View view) {
