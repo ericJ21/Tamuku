@@ -165,8 +165,6 @@ public class Registration2ndScreen extends AppCompatActivity implements View.OnC
                         code4.requestFocus();
                     break;
                 case R.id.editCode6:
-                    if (text.length() == 0)
-                        code5.requestFocus();
                     break;
             }
           }

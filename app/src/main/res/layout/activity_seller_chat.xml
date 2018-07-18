@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SellerChatActivity"
+    android:background="#E8E8E8">
+
+    <RelativeLayout
+        android:id="@+id/price_layout"
+        android:layout_width="333.5dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="66dp"
+        android:background="#fff">
+
+
+        <TextView
+            android:id="@+id/textViewPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center_vertical"
+            android:text="Your Price :"
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/editPrice"
+            android:layout_width="84dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="12dp"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center_vertical"
+            android:textColor="#000"
+            android:textAlignment="center"
+            android:textSize="18sp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/MainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentStart="true"
+        android:background="#FFFE00"
+        android:elevation="4dp">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="14dp"
+            android:background="@drawable/backarrow" />
+
+        <TextView
+            android:id="@+id/mtextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/roboto_medium"
+            android:text="mtextview"
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnNoty"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="60dp"
+            android:background="@drawable/noty" />
+
+        <Button
+            android:id="@+id/btnAlert"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="14dp"
+            android:background="@drawable/alert" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/fab"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/user_message"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/send"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <ListView
+        android:id="@+id/list_message"
+        android:layout_width="match_parent"
+        android:layout_height="332dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll">
+
+    </ListView>
+
+    <EditText
+        android:id="@+id/user_message"
+        android:layout_width="288dp"
+        android:layout_height="34dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/user_layout"
+        android:layout_marginEnd="34dp"
+        android:layout_alignEnd="@id/fab"
+        android:layout_marginBottom="74dp"
+        android:background="@drawable/custom_edit_text_msg"
+        android:hint="Enter your message here.."
+        android:textSize="12sp" />
+
+    <RelativeLayout
+        android:id="@+id/user_layout"
+        android:layout_width="333.5dp"
+        android:layout_height="42dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="26dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:background="#fff"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <ImageView
+            android:id="@+id/userProfile"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/profilepic"/>
+
+        <TextView
+            android:id="@+id/chattingView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/userProfile"
+            android:layout_marginStart="10dp"
+            android:text="You are now chatting with:"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:id="@+id/userName_Address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/userProfile"
+            android:layout_marginStart="10dp"
+            android:text="Lucy J. Angkasa Apartment" />
+
+        <TextView
+            android:id="@+id/rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:text="4.0/5"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/chatBotView"
+        android:layout_width="match_parent"
+        android:layout_height="18dp"
+        android:background="@drawable/tamukubot"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
