@@ -4,16 +4,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#E8E8E8"
-    tools:context=".BuyerChatActivity">
+    tools:context=".BuyerChatActivity"
+    android:clipToPadding="false"
+    android:focusableInTouchMode="true">
 
     <RelativeLayout
         android:id="@+id/price_layout"
-        android:layout_width="333.5dp"
-        android:layout_height="50dp"
+        android:layout_width="325dp"
+        android:layout_height="55dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="66dp"
-        android:background="#fff">
+        android:background="@drawable/custom_bg"
+        android:elevation="3dp"
+        android:fadingEdge="horizontal"
+        android:minWidth="1dp">
 
 
         <TextView
@@ -22,7 +27,9 @@
             android:layout_height="match_parent"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
+            android:layout_marginBottom="2dp"
             android:layout_marginStart="12dp"
+            android:layout_marginTop="2dp"
             android:fontFamily="@font/roboto_bold"
             android:gravity="center_vertical"
             android:text="Your Offer :"
@@ -35,9 +42,13 @@
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
             android:layout_alignParentTop="true"
+            android:layout_marginBottom="2dp"
             android:layout_marginEnd="12dp"
+            android:layout_marginTop="2dp"
+            android:background="#fff"
             android:fontFamily="@font/roboto_bold"
             android:gravity="center_vertical"
+            android:inputType="text"
             android:textAlignment="center"
             android:textColor="#000"
             android:textSize="18sp" />
@@ -67,7 +78,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:fontFamily="@font/roboto_medium"
-            android:text="mtextview"
+            android:text="Samsung S9"
             android:textColor="#000"
             android:textSize="16sp" />
 
@@ -92,23 +103,30 @@
 
     <Button
         android:id="@+id/fab"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/user_message_buyer"
+        android:layout_marginBottom="82dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="3dp"
         android:background="@drawable/send"
+        android:shadowColor="#000"
+        android:shadowRadius="1"
         android:clickable="true"
         android:focusable="true" />
 
     <ListView
         android:id="@+id/list_message"
         android:layout_width="match_parent"
-        android:layout_height="332dp"
+        android:layout_height="311dp"
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
+        android:layout_alignTop="@+id/price_layout"
+        android:layout_alignBottom="@+id/user_message_buyer"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
         android:divider="@android:color/transparent"
         android:dividerHeight="0dp"
         android:stackFromBottom="true"
@@ -120,19 +138,25 @@
         android:id="@+id/user_message_buyer"
         android:layout_width="288dp"
         android:layout_height="34dp"
-        android:layout_alignEnd="@id/fab"
+        android:layout_toStartOf="@+id/fab"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/user_layout"
-        android:layout_marginBottom="74dp"
-        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="83dp"
+        android:layout_marginEnd="2dp"
+        android:layout_alignStart="@+id/price_layout"
         android:background="@drawable/custom_edit_text_msg"
         android:hint="Enter your message here.."
+        android:inputType="text"
+        android:elevation="2dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:shadowColor="#000"
         android:textSize="12sp" />
 
     <RelativeLayout
-        android:id="@+id/user_layout_seller"
-        android:layout_width="333.5dp"
-        android:layout_height="42dp"
+        android:id="@+id/user_layout_buyer"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:layout_alignEnd="@+id/fab"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
@@ -140,15 +164,21 @@
         android:layout_marginBottom="26dp"
         android:layout_marginEnd="20dp"
         android:layout_marginStart="20dp"
-        android:background="#fff"
+        android:background="@drawable/custom_bg"
+        android:elevation="3dp"
+        android:minWidth="1dp"
+        android:outlineAmbientShadowColor="#000"
         android:paddingBottom="5dp"
-        android:paddingTop="5dp">
+        android:paddingTop="5dp"
+        android:shadowColor="#000">
 
         <ImageView
             android:id="@+id/userProfile"
             android:layout_width="37dp"
             android:layout_height="37dp"
             android:layout_marginStart="10dp"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="2dp"
             android:background="@drawable/profilepic" />
 
         <TextView
@@ -158,7 +188,9 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="10dp"
             android:layout_toEndOf="@+id/userProfile"
+            android:fontFamily="@font/roboto"
             android:text="You are now chatting with:"
+            android:textColor="#000"
             android:textSize="10sp" />
 
         <TextView
@@ -168,7 +200,21 @@
             android:layout_alignParentBottom="true"
             android:layout_marginStart="10dp"
             android:layout_toEndOf="@+id/userProfile"
-            android:text="Lucy J. Angkasa Apartment" />
+            android:fontFamily="@font/roboto_bold"
+            android:text="Peter G."
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/userAddress1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="2dp"
+            android:layout_toEndOf="@+id/userName_Address"
+            android:fontFamily="@font/roboto"
+            android:text="Kepayan Ridge"
+            android:textColor="#000"
+            android:textSize="10sp" />
 
         <TextView
             android:id="@+id/rate"
@@ -177,7 +223,9 @@
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:layout_marginEnd="10dp"
+            android:fontFamily="@font/roboto_medium"
             android:text="4.0/5"
+            android:textColor="#000"
             android:textSize="12sp" />
     </RelativeLayout>
 
