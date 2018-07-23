@@ -194,9 +194,9 @@
             android:layout_alignParentBottom="true"
             android:layout_marginStart="10dp"
             android:layout_toEndOf="@+id/userProfile"
-            android:fontFamily="@font/roboto"
+            android:fontFamily="@font/roboto_bold"
             android:text="Lucy J." />
-
+            android:textColor="#000" />
         <TextView
             android:id="@+id/userAddress"
             android:layout_width="wrap_content"
