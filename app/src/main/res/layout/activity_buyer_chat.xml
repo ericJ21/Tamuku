@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#E8E8E8"
     tools:context=".BuyerChatActivity"
     android:clipToPadding="false"
@@ -172,14 +173,17 @@
         android:paddingTop="5dp"
         android:shadowColor="#000">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/userProfile"
             android:layout_width="37dp"
             android:layout_height="37dp"
             android:layout_marginStart="10dp"
             android:scaleType="fitCenter"
             android:layout_marginTop="2dp"
-            android:background="@drawable/profilepic" />
+            android:background="@drawable/profilepic"
+            android:fitsSystemWindows="true"
+            app:civ_border_width="1dp"
+            app:civ_border_color="#000"/>
 
         <TextView
             android:id="@+id/chattingView"

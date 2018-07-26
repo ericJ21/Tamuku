@@ -34,10 +34,12 @@ import com.google.firebase.storage.UploadTask;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class MainActivity extends AppCompatActivity {
 
     private TextView textViewPleasefillin;
-    private ImageButton imageButtonProfile;
+    private CircleImageView imageButtonProfile;
     private TextView textViewUpload;
     private EditText editTextUsername;
     private EditText editTextEmail;
