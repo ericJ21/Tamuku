@@ -24,6 +24,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
@@ -174,18 +175,16 @@ public class MainActivity extends AppCompatActivity {
     private void sendUserData() {
         username = editTextUsername.getText().toString().trim();
         email = editTextEmail.getText().toString().trim();
-        image = imageButtonProfile.toString().trim();
+//        image = imageButtonProfile.toString().trim();
         password = editTextPassword.getText().toString().trim();
 
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = firebaseDatabase.getReference(firebaseAuth.getUid()).child("User Information");
-
-        UserRegistrationInformation userInfo = new UserRegistrationInformation(username, email, image, password);
-        myRef.setValue(userInfo);
+        FirebaseUser user = firebaseAuth.getCurrentUser();
+        final DatabaseReference myRef = firebaseDatabase.getReference(user.getUid()).child("User Information");
 
         if (filePath != null) {
             //Upload Image to Firebase Storage
-            StorageReference imageReference = storageReference.child(firebaseAuth.getUid()).child("Images").child("Profile Pic");
+            StorageReference imageReference = storageReference.child(user.getUid()).child("Images").child("Profile Pic");
             UploadTask uploadTask = imageReference.putFile(filePath);
             uploadTask.addOnFailureListener(new OnFailureListener() {
                 @Override
@@ -196,6 +195,8 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                     Toast.makeText(MainActivity.this, "Uploaded", Toast.LENGTH_SHORT).show();
+                    UserRegistrationInformation userInfo = new UserRegistrationInformation(username, email, taskSnapshot.getUploadSessionUri().toString(), password);
+                    myRef.setValue(userInfo);
                 }
             }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
                 @Override
