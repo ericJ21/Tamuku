@@ -1,27 +1,19 @@
 package com.example.nyxulric.enterprofiletamuku;
 
 public class UserRegistrationInformation {
-    public String username;
     public String email;
-    public String imageAddress;
     public String password;
+    public String imageAddress;
+    public String username;
 
-    public UserRegistrationInformation(){
+    public UserRegistrationInformation() {
 
     }
 
-    public UserRegistrationInformation(String username, String email, String imageAddress, String password) {
-        this.username = username;
+    public UserRegistrationInformation(String email, String password, String imageAddress, String username) {
         this.email = email;
-        this.imageAddress = imageAddress;
         this.password = password;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
+        this.imageAddress = imageAddress;
         this.username = username;
     }
 
@@ -33,6 +25,14 @@ public class UserRegistrationInformation {
         this.email = email;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     public String getImageAddress() {
         return imageAddress;
     }
@@ -41,11 +41,12 @@ public class UserRegistrationInformation {
         this.imageAddress = imageAddress;
     }
 
-    public String getPassword() {
-        return password;
+    public String getUsername() {
+        return username;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setUsername(String username) {
+        this.username = username;
     }
 }
+

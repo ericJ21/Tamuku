@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
 
     //Choosing image activity
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK &&
                 data != null &&data.getData() != null) {
@@ -125,10 +125,10 @@ public class MainActivity extends AppCompatActivity {
 
     //Registration New User
     private void userRegister() {
-        username = editTextUsername.getText().toString().trim();
         email = editTextEmail.getText().toString().trim();
         password = editTextPassword.getText().toString().trim();
         confirmpassword = editTextConfirmPassword.getText().toString().trim();
+        username = editTextUsername.getText().toString().trim();
 
         //Registration for email and password
         if (TextUtils.isEmpty(username)) {
@@ -162,7 +162,8 @@ public class MainActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             sendUserData();
                             Toast.makeText(MainActivity.this, "Registration Complete", Toast.LENGTH_SHORT).show();
-                            //   startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                            finish();
+                            startActivity(new Intent(getApplicationContext(), SplashScreenHome.class));
                         } else {
                             Toast.makeText(MainActivity.this, "Could not Register. Please Try Again", Toast.LENGTH_SHORT).show();
                         }
@@ -173,10 +174,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void sendUserData() {
-        username = editTextUsername.getText().toString().trim();
-        email = editTextEmail.getText().toString().trim();
-//        image = imageButtonProfile.toString().trim();
-        password = editTextPassword.getText().toString().trim();
 
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         FirebaseUser user = firebaseAuth.getCurrentUser();
@@ -194,8 +191,8 @@ public class MainActivity extends AppCompatActivity {
             }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                    UserRegistrationInformation userInfo = new UserRegistrationInformation(email, password, taskSnapshot.getUploadSessionUri().toString(), username);
                     Toast.makeText(MainActivity.this, "Uploaded", Toast.LENGTH_SHORT).show();
-                    UserRegistrationInformation userInfo = new UserRegistrationInformation(username, email, taskSnapshot.getUploadSessionUri().toString(), password);
                     myRef.setValue(userInfo);
                 }
             }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
