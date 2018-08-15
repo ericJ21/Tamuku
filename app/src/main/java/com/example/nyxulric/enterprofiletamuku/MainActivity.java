@@ -174,7 +174,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void sendUserData() {
-
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         FirebaseUser user = firebaseAuth.getCurrentUser();
         final DatabaseReference myRef = firebaseDatabase.getReference(user.getUid()).child("User Information");
